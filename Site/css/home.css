@@ -18,6 +18,7 @@
 }
 
 body {
+    background-image: url(../imgs/Background/fundo_filmes.jpg);
     margin: 0;
     padding: 0;
     background-image: url();
@@ -36,6 +37,25 @@ header {
     padding: 15px;
     text-align: center;
     z-index: 1000;
+}
+
+.NavBar {
+    display: flex;
+    background-color: #6f9b63;
+    justify-content: space-around;
+    color: black;
+}
+
+.NavIcon1, .NavIcon2, .NavIcon3 {
+    text-decoration: none; 
+    color: black; 
+}
+
+.NavIcon1:hover, .NavIcon2:hover, .NavIcon3:hover {
+    transition: .5s;
+    color: white; /* Altere a cor do texto quando o item é selecionado */
+    transform: scale(1.1);
+    z-index: 2;
 }
 
 section {
@@ -107,12 +127,21 @@ section {
     transition: all .9s ease;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 0px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+.iconEu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer {
+    width: auto;
+    height: 60px;
+    background-color: #6f9b63;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
 }
