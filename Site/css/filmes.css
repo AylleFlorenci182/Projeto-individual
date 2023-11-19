@@ -1,0 +1,29 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.background {
+    display: flex;
+    height: 200px;
+    width: auto;
+    background-color: darkgrey;
+}
+
+.Titulo {
+    display: flex;
+    font-size: xxx-large;
+    justify-content: space-around;
+}
+
+.NavBar {
+    display: flex;
+    background-color: darkgrey;
+    justify-content: space-around;
+
+}
+
+.conteudo{
+
+    font-style: oblique;
+    
+}
