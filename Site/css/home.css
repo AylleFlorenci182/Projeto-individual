@@ -48,12 +48,21 @@ header {
     top: 115px;
 }
 
-.NavIcon1, .NavIcon2, .NavIcon3, .NavIcon4 , .NavIcon5 {
-    text-decoration: none; 
-    color: black; 
+.NavIcon1,
+.NavIcon2,
+.NavIcon3,
+.NavIcon4,
+.NavIcon5 {
+    text-decoration: none;
+    color: black;
 }
 
-.NavIcon1:hover, .NavIcon2:hover, .NavIcon3:hover, .NavIcon4:hover, .NavIcon3:hover,   z {
+.NavIcon1:hover,
+.NavIcon2:hover,
+.NavIcon3:hover,
+.NavIcon4:hover,
+.NavIcon5:hover,
+z {
     transition: .5s;
     color: white;
     transform: scale(1.1);
@@ -70,6 +79,30 @@ section {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+    border-top: #6f9b63 solid 40px ;
+}
+
+
+.sobre {
+    display: flex;
+    font-size: x-large;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 15px;
+}
+
+.detalhes_museu {
+    display: flex;
+    background-color: #c6dfbf;
+    justify-content: space-between;
+    padding: 50px 50px 50px 50px ;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
 }
 
 .box {
@@ -146,4 +179,10 @@ section {
     flex-wrap: wrap;
     align-content: center;
     align-items: center;
+}
+
+/* Isso faz com que todas as tags <a></a> fiquem sem aquela linha */
+a {
+    color: black;
+    text-decoration: none;
 }
