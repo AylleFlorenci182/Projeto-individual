@@ -15,13 +15,12 @@
     align-items: flex-start;
     align-content: stretch;
     flex-direction: row;
+    z-index: 999;
 }
 
 body {
-    background-image: url(../imgs/Background/fundo_filmes.jpg);
     margin: 0;
     padding: 0;
-    background-image: url();
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -30,7 +29,7 @@ header {
     width: auto;
     position: sticky;
     top: 0;
-    height: 100px;
+    height: 85px;
     background-color: #7ba96e;
     background-size: cover;
     background-repeat: no-repeat;
@@ -44,16 +43,19 @@ header {
     background-color: #6f9b63;
     justify-content: space-around;
     color: black;
+    z-index: 1000;
+    position: sticky;
+    top: 115px;
 }
 
-.NavIcon1, .NavIcon2, .NavIcon3 {
+.NavIcon1, .NavIcon2, .NavIcon3, .NavIcon4 , .NavIcon5 {
     text-decoration: none; 
     color: black; 
 }
 
-.NavIcon1:hover, .NavIcon2:hover, .NavIcon3:hover {
+.NavIcon1:hover, .NavIcon2:hover, .NavIcon3:hover, .NavIcon4:hover, .NavIcon3:hover,   z {
     transition: .5s;
-    color: white; /* Altere a cor do texto quando o item é selecionado */
+    color: white;
     transform: scale(1.1);
     z-index: 2;
 }
