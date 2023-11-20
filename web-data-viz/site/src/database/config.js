@@ -36,7 +36,7 @@ var mySqlConfig = {
 
     host: "localhost",
 
-    database: "aquatech",
+    database: "Projeto_Individual",
 
     user: "root",
 

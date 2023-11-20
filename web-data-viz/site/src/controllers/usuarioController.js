@@ -93,9 +93,7 @@ function cadastrar(req, res) {
 
     var senha = req.body.senhaServer;
 
-    var empresaId = req.body.empresaServer;
-    
-    var cpf = req.body.cpfServer;
+    var dataNasc = req.body.dtNascServer;
 
     // Faça as validações dos valores
 
@@ -106,20 +104,19 @@ function cadastrar(req, res) {
     } else if (email == undefined) {
 
         res.status(400).send("Seu email está undefined!");
-
+        
     } else if (senha == undefined) {
-
+        
         res.status(400).send("Sua senha está undefined!");
+        
+    } else if (dataNasc == undefined) {
 
-    } else if (empresaId == undefined) {
-
-        res.status(400).send("Sua empresa está undefined!");
-
+        res.status(400).send("Sua data de nascimento está undefined!");
     } else {
 
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
 
-        usuarioModel.cadastrar(nome, email, senha, empresaId, cpf)
+        usuarioModel.cadastrar(nome, email, senha, dataNasc)
 
             .then(
 
@@ -135,7 +132,7 @@ function cadastrar(req, res) {
 
                     console.log(
 
-                        "\(>-<)/ Houve um erro ao realizar o cadastro! Erro: ", erro.sqlMessage);
+                        "Houve um erro ao realizar o cadastro! Erro: ", erro.sqlMessage);
 
                     res.status(500).json(erro.sqlMessage);
                 }

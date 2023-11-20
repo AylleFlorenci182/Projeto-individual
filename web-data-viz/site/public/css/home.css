@@ -2,6 +2,27 @@
     font-family: cursive;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sobre {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    line-height: 1.5;
+}
+
 .Logo {
     display: flex;
     height: 100px;
@@ -16,13 +37,6 @@
     align-content: stretch;
     flex-direction: row;
     z-index: 999;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 header {
@@ -97,6 +111,11 @@ z {
     align-items: center;
     flex-wrap: wrap;
     margin: 15px;
+}
+
+.alinhamento {
+    display: flex;
+    justify-content: center;
 }
 
 .detalhes_museu {
