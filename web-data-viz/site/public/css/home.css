@@ -69,19 +69,24 @@ z {
     z-index: 2;
 }
 
-section {
-    padding: 20px;
+.NavBar a {
+    color: black;
+    text-decoration: none;
 }
 
 .container {
+    border-top: #6f9b63 solid 40px;
     display: flex;
     margin: 10px 10px 10px 10px;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    border-top: #6f9b63 solid 40px ;
+    border-bottom: #6f9b63 solid 30px;
 }
 
+.curta {
+    border-top: none;
+}
 
 .sobre {
     display: flex;
@@ -95,14 +100,16 @@ section {
 }
 
 .detalhes_museu {
+    border-top: #6f9b63 solid 40px;
     display: flex;
     background-color: #c6dfbf;
     justify-content: space-between;
-    padding: 50px 50px 50px 50px ;
+    padding: 50px 50px 50px 50px;
     align-content: center;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+    border-bottom: #6f9b63 solid 40px;
 }
 
 .box {
@@ -162,10 +169,41 @@ section {
     transition: all .9s ease;
 }
 
-.iconEu {
+.Usuario {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+
+}
+
+.cadastro {
+    display: flex;
+    border-top: #7b8a76;
+    box-shadow: 0px 0px 25px grey;
+    width: 500px;
+    height: 420px;
+    background-size: cover;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px 15px 15px 15px;
+    border-radius: 20px;
+    flex-wrap: nowrap;
+}
+
+.login {
+    display: flex;
+    border-top: #7b8a76;
+    box-shadow: 0px 0px 25px grey;
+    width: 500px;
+    height: 420px;
+    background-size: cover;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px 15px 15px 15px;
+    border-radius: 20px;
+    flex-wrap: nowrap;
 }
 
 .footer {
@@ -181,8 +219,8 @@ section {
     align-items: center;
 }
 
-/* Isso faz com que todas as tags <a></a> fiquem sem aquela linha */
-.NavBar a {
-    color: black;
-    text-decoration: none;
+.iconEu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
