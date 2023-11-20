@@ -182,7 +182,7 @@ section {
 }
 
 /* Isso faz com que todas as tags <a></a> fiquem sem aquela linha */
-a {
+.NavBar a {
     color: black;
     text-decoration: none;
 }
