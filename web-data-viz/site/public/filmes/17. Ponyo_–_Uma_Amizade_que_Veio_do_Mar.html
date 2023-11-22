@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/filmes.css">
+    <title>Titulo Filmes escolhido</title>
+</head>
+
+<body>
+
+    <div class="background">
+
+        <div class="random1">   
+            <img style="display: flex; width: 450px; height: 200px; justify-content: space-between;" src="https://i.pinimg.com/564x/ab/ea/5a/abea5afec1f9f45270a44de5dc726d93.jpg" id="img1">
+        </div>
+
+        <div class="random1">
+            <img style="display: flex; width: 450px; height: 200px; justify-content: space-between;" src="https://i.pinimg.com/564x/ed/26/5c/ed265c001a77c1764c708212c992f286.jpg" id="img2">
+        </div>
+
+        <div class="random1">
+            <img style="display: flex; width: 450px; height: 200px; justify-content: space-between;" src="https://i.pinimg.com/564x/33/a1/27/33a127a6f599cc56c553d2106d2163d2.jpg" id="img3">
+        </div>
+
+    </div>
+
+    <div class="Titulo">
+        TITULO FILME
+    </div>
+
+    <div class="NavBar">
+        <a href="../index.html">
+            <ul class="NavIcon1">Home</ul>
+        </a>
+        <a href="#sinopse" target="_self">
+            <ul class="NavIcon1">Sinopse</ul>
+        </a>
+        <a href="#personagem" target="_self">
+            <ul class="NavIcon1">Personagens</ul>
+        </a>
+        <a href="#galeria" target="_self">
+            <ul class="NavIcon1">Galeria</ul>
+        </a>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="conteudo" id="Sinopse">
+
+        <h3>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis doloremque, velit recusandae impedit
+            repudiandae nisi fuga totam. Porro vitae pariatur rerum in, optio saepe accusamus, ea beatae dicta voluptate
+            sequi!
+        </h3>
+
+    </div>
+
+    <script>
+        var imgsArray = [
+            "../assets/imgs/Background/Img_Random (2).jpg",
+            "../assets/imgs/Background/Img_Random (3).jpg",
+            "../assets/imgs/Background/Img_Random (4).jpg",
+            "../assets/imgs/Background/Img_Random (5).jpg",
+            "../assets/imgs/Background/Img_Random (6).jpg",
+            "../assets/imgs/Background/Img_Random (7).jpg",
+            "../assets/imgs/Background/Img_Random (8).jpg",
+            "../assets/imgs/Background/Img_Random (9).jpg",
+            "../assets/imgs/Background/Img_Random (10).jpg",
+            "../assets/imgs/Background/Img_Random (11).jpg",
+            "../assets/imgs/Background/Img_Random (12).jpg",
+            "../assets/imgs/Background/Img_Random (13).jpg",
+            "../assets/imgs/Background/Img_Random (14).jpg",
+            "../assets/imgs/Background/Img_Random (15).jpg",
+            "../assets/imgs/Background/Img_Random (16).jpg",
+            "../assets/imgs/Background/Img_Random (17).jpg",
+            "../assets/imgs/Background/Img_Random (18).jpg",
+            "../assets/imgs/Background/Img_Random (19).jpg",
+            "../assets/imgs/Background/Img_Random (20).jpg",
+            "../assets/imgs/Background/Img_Random (21).jpg",
+            "../assets/imgs/Background/Img_Random (22).jpg",
+            "../assets/imgs/Background/Img_Random (23).jpg",
+            "../assets/imgs/Background/Img_Random (24).jpg",
+            "../assets/imgs/Background/Img_Random (25).jpg",
+            "../assets/imgs/Background/Img_Random (26).jpg"
+        ];
+
+
+        function getIndiceAleatorio(array) {
+            return Math.floor(Math.random() * array.length);
+        }
+
+        function trocarImagem(idElemento) {
+            document.getElementById(idElemento).src = imgsArray[getIndiceAleatorio(imgsArray)];
+        }
+
+        setInterval(function () {
+            trocarImagem('img1');
+        }, 2000);
+
+        setInterval(function () {
+            trocarImagem('img2');
+        }, 2000);
+
+        setInterval(function () {
+            trocarImagem('img3');
+        }, 2000);
+
+    </script>
+</body>
+
+</html>
