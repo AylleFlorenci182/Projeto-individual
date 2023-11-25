@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header, section, footer {
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    color: #888;
+}
