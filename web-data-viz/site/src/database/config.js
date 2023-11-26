@@ -48,36 +48,38 @@ function executar(instrucao) {
 
     // VERIFICA A VARIÁVEL DE AMBIENTE SETADA EM app.js
 
-    if (process.env.AMBIENTE_PROCESSO == "producao") {
+    // if (process.env.AMBIENTE_PROCESSO == "producao") {
 
-        return new Promise(function (resolve, reject) {
+    //     return new Promise(function (resolve, reject) {
             
-            sql.connect(sqlServerConfig).then(function () {
+    //         sql.connect(sqlServerConfig).then(function () {
 
-                return sql.query(instrucao);
+    //             return sql.query(instrucao);
 
-            }).then(function (resultados) {
+    //         }).then(function (resultados) {
 
-                console.log(resultados);
+    //             console.log(resultados);
 
-                resolve(resultados.recordset);
+    //             resolve(resultados.recordset);
 
-            }).catch(function (erro) {
+    //         }).catch(function (erro) {
 
-                reject(erro);
+    //             reject(erro);
 
-                console.log('ERRO: ', erro);
+    //             console.log('ERRO: ', erro);
 
-            });
+    //         });
 
-            sql.on('error', function (erro) {
+    //         sql.on('error', function (erro) {
 
-                return ("ERRO NO SQL SERVER (Azure): ", erro);
-            });
+    //             return ("ERRO NO SQL SERVER (Azure): ", erro);
+    //         });
 
-        });
+    //     });
 
-    } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
+    // } else 
+    
+    if (process.env.AMBIENTE_PROCESSO == "producao") {
 
         return new Promise(function (resolve, reject) {
 

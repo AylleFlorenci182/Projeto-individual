@@ -92,7 +92,7 @@ z {
     display: flex;
     align-items: center;
     margin: 15px 500px 0px 390px;
-    background-color: #a5beca5e;
+    background-color: #d1dee491;
     border-radius: 15px;
 }
 
@@ -132,7 +132,7 @@ z {
     padding: 50px 50px 50px 50px;
 }
 
-.detalhes_museu  {
+.detalhes_museu {
     margin: 20px !important;
     background-color: #c6dfbf !important;
 }
@@ -210,7 +210,15 @@ z {
     position: relative;
     display: flex;
     align-items: center;
-    background-color: #c2bdde;
+    background-color: #d1dee491;
+}
+
+.onu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #d1dee491;
+
 }
 
 .inputs {
@@ -275,3 +283,10 @@ z {
     flex-direction: column;
     align-items: center;
 }
+
+.botão_saber {
+    display: flex;
+    justify-content: center;
+}
+
+    
