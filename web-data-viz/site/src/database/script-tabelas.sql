@@ -23,3 +23,36 @@ alter table Quizz
 select * from Usuario;
 
 select * from Quizz;
+
+select Usuario.idusuario, Usuario.nickname, Usuario.email, Quizz.pontuacao, Quizz.dtTentativa
+	from Usuario
+		join Quizz 
+			on Usuario.idusuario = Quizz.fkUsuario;
+
+select Usuario.nickname, Quizz.pontuacao, Quizz.dtTentativa
+	from Usuario
+		join Quizz 
+			on Usuario.idusuario = Quizz.fkUsuario;
+
+select Usuario.nickname, (SUM(Quizz.pontuacao) - MAX(Quizz.pontuacao)) AS pontuacao_menos_ja_feita
+	from Usuario
+		join Quizz 
+			on Usuario.idusuario = Quizz.fkUsuario
+				group by Usuario.idusuario, Usuario.nickname;
+
+select Usuario.nickname, MAX(Quizz.pontuacao) AS maior_pontuacao
+	from Usuario
+		join Quizz 
+			on Usuario.idusuario = Quizz.fkUsuario
+				group by Usuario.idusuario, Usuario.nickname;
+
+select avg(pontuacao) 
+	as media_pontuacao
+		from quizz;
+
+select Usuario.nickname, 
+	avg(Quizz.pontuacao) 
+		as media_pontuacao
+			from Usuario
+				join Quizz on Usuario.idusuario = Quizz.fkusuario
+					group by Usuario.idusuario, Usuario.nickname;
