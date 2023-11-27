@@ -2,6 +2,15 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.teto {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    flex-direction: column;
+    /* z-index: 999; */
+    align-content: center;
+}
+
 .background {
     display: flex;
     height: 200px;
@@ -54,7 +63,12 @@ z {
 }
 
 .conteudo {
+    font-style: normal;
+    border-bottom: #6f9b63 solid 20px;
+}
 
-    font-style: oblique;
-
+.personagem_do_filme {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }

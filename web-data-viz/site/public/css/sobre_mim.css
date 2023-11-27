@@ -4,12 +4,15 @@ body {
     margin: 20px;
 }
 
-h1 {
-    color: #333;
+h1 , h2 {
+    color: blueviolet;
 }
 
 p {
-    color: #555;
+    display: flex;
+    color: #555555;
+    align-items: center;
+    font-size: xx-large;
 }
 
 img {
@@ -17,7 +20,9 @@ img {
     height: auto;
 }
 
-header, section, footer {
+header,
+section,
+footer {
     margin-bottom: 20px;
 }
 

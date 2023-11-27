@@ -32,10 +32,6 @@
 
     <div class="NavBar">
 
-        <a href="#quiz">
-            <ul class="NavIcon1">QUIZ</b></ul>
-        </a>
-
         <a href="#sobre">
             <ul class="NavIcon1">HISTORIA</ul>
         </a>
@@ -46,6 +42,10 @@
 
         <a href="#filmes">
             <ul class="NavIcon1">FILMOGRAFIA</ul>
+        </a>
+
+        <a href="#quiz">
+            <ul class="NavIcon1">QUIZ</b></ul>
         </a>
 
         <a href="#contato">
@@ -1467,10 +1467,131 @@
 
     </div>
 
+    <h1>TESTE SEU CONHECIMENTO</h1>
+    <h1>A que filme estes personagens pertencem</h1>
+
+    <div class="questionario" id="quiz">
+        <div>
+
+            <img src="https://i.pinimg.com/564x/7b/35/0a/7b350a62c8914c9c54b6ab2aa9b08b0f.jpg"
+                style="width: 310px; height: 310px;"> <br>
+
+            <label>
+                <input type="radio" name="questao1" class="quest1" value="false"> O Castelo Animado
+            </label>
+
+            <label>
+                <input type="radio" name="questao1" class="quest1" value="false"> Pequeninos
+            </label>
+
+            <label>
+                <input type="radio" name="questao1" class="quest1" value="true"> Pom Poko - A Grande Batalha dos
+                Guaxinins
+            </label>
+        </div>
+
+        <div>
+            <img src="https://i.pinimg.com/564x/aa/d7/05/aad705723f95f0fa124199bf5b94d4f3.jpg"
+                style="width: 310px; height: 310px;"> <br>
+
+            <label>
+                <input type="radio" name="questao2" class="quest1" value="false"> Ponyo – Uma Amizade que Veio do Mar
+            </label>
+
+            <label>
+                <input type="radio" name="questao2" class="quest1" value="true"> Sussurros do Coração
+            </label>
+
+            <label>
+                <input type="radio" name="questao2" class="quest1" value="false"> O Reino dos Gatos
+            </label>
+        </div>
+
+        <div>
+            <img src="https://i.pinimg.com/564x/45/8d/b7/458db797758a7c98816aca88b81eb7b9.jpg"
+                style="width: 310px; height: 310px;"> <br>
+
+            <label>
+                <input type="radio" name="questao3" class="quest1" value="true"> Meus Vizinhos Yamadas
+            </label>
+
+            <label>
+                <input type="radio" name="questao3" class="quest1" value="false"> Princesa Mononoke
+            </label>
+
+            <label>
+                <input type="radio" name="questao3" class="quest1" value="false"> Eu Posso Ouvir o Oceano
+            </label>
+        </div>
+
+        <div>
+            <img src="https://i.pinimg.com/736x/ce/2c/4b/ce2c4bbad9651a5e60650caa46b12a7d.jpg"
+                style="width: 310px; height: 310px;"> <br>
+            <label>
+                <input type="radio" name="questao4" class="quest1" value="false"> Nausicaä do Vale do Vento
+            </label>
+
+            <label>
+                <input type="radio" name="questao4" class="quest1" value="true"> O Mundo dos Pequeninos
+            </label>
+
+            <label>
+                <input type="radio" name="questao4" class="quest1" value="false"> O Rapaz e a Garça
+            </label>
+        </div>
+
+        <div>
+            <img src="https://i.pinimg.com/564x/43/b6/14/43b614bffe2dc476107db69fc1bc598d.jpg"
+                style="width: 310px; height: 310px;"> <br>
+            <label>
+                <input type="radio" name="questao5" class="quest1" value="false"> Porco Rosso o Último Herói
+                Romântico
+            </label>
+
+            <label>
+                <input type="radio" name="questao5" class="quest1" value="false"> Meu Amigo Totoro
+            </label>
+
+            <label>
+                <input type="radio" name="questao5" class="quest1" value="true"> Contos de Terramar
+            </label>
+            <br><br>
+
+        </div>
+
+    </div>
+
+    <div style="display: flex; flex-direction: row;">
+        <button onclick="verificar_resposta()"
+            style="display: block; margin: 20px auto; padding: 10px 20px; background-color: #4caf50; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">verificar
+            pontuação
+        </button>
+
+        <button onclick="registro_bd()"
+            style="display: block; margin: 20px auto; padding: 10px 20px; background-color: #4caf50; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">guardar
+            pontuação
+        </button>
+
+        <!-- <button onclick="ver_pontuacao()"
+            style="display: block; margin: 20px auto; padding: 10px 20px; background-color: #4caf50; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">ver
+            pontuação
+        </button> -->
+    </div>
 
     <div class="footer" id="contato">
         <div class="iconEu">
-            <img src="./assets/imgs/IconMain/eu.png" alt="Aylle Cartoon" style="width: 60px; height: 60px;">
+            <img src="./assets/imgs/IconMain/eu.png" alt="Aylle Cartoon" style="width: 60px; height: 60px;"> <br>
+            <img src="./assets/imgs/IconMain/eu_artist.png" alt="Aylle Cartoon" style="width: 60px; height: 60px;"> <br>
+            <img src="./assets/imgs/IconMain/eu_atenttionpng.png" alt="Aylle Cartoon"
+                style="width: 60px; height: 60px;"> <br>
+        </div>
+
+        <br><br>
+
+        <div>
+            <img src="./assets/imgs/IconSmall/Euzinha.png" alt="icone do WhatsApp" style="width: 20px; height: 20px;">
+            <b>Feito por Aylle</b> <br>
+            <i><a href="html/Sobre_mim.html" target="_blank">Sobre o criador :</a></i>
         </div>
 
         <br><br>
@@ -1515,3 +1636,153 @@
 </body>
 
 </html>
+
+<script>
+
+    function verificar_resposta() {
+        const perguntas = document.querySelectorAll('[name^="questao"]');
+
+        const respostasCorretas = {
+            questao1: "true",
+            questao2: "true",
+            questao3: "true",
+            questao4: "true",
+            questao5: "true"
+        };
+
+        let pontuacao = 0;
+
+        perguntas.forEach((pergunta, index) => {
+            const nomePergunta = `questao${index + 1}`;
+            const opcoes = document.getElementsByName(nomePergunta);
+
+            let respostaSelecionada = "";
+            opcoes.forEach(opcao => {
+                if (opcao.checked) {
+                    respostaSelecionada = opcao.value;
+                }
+            });
+
+            if (respostaSelecionada === respostasCorretas[nomePergunta]) {
+                pontuacao++;
+            }
+        });
+
+        alert(`Sua pontuação é: ${pontuacao} de 5`);
+
+        sessionStorage.PONTUACAO_SESSION = pontuacao
+    }
+
+    function registro_bd() {
+        fetch("/usuarios/registrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idServer: sessionStorage.getItem("ID_USUARIO"),
+                pontuacaoServer: sessionStorage.getItem("PONTUACAO_SESSION")
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO registrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                // resposta.json().then(json => {
+                //     console.log(json);
+                //     console.log(JSON.stringify(json));
+                //     sessionStorage.EMAIL_USUARIO = json.email;
+                //     sessionStorage.NOME_USUARIO = json.nome;
+                //     sessionStorage.ID_USUARIO = json.id;
+
+                //     setTimeout(function () {
+                //         window.location = "./Pg_livre.html";
+                //     }, 1000); // apenas para exibir o loading 
+
+                // });
+
+            } else {
+
+                alert("Houve um erro ao tentar realizar o cadastro! Analise se os campos estão preenchidos correntamente ");
+
+                resposta.text().then(texto => {
+                    // console.error(texto); 
+                    // finalizarAguardar(texto); 
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function validarData() {
+        var data = new Date();
+
+        var dataAtual = `${data.getFullYear()}-${data.getMonth() + 1}-${data.getDate()}`;
+
+        var ultima_pontuacao = sessionStorage.getItem("ultima_pontuacao");
+
+        if (ultima_pontuacao == dataAtual) {
+
+            return false;
+
+        } else {
+
+            return true;
+
+        }
+
+    }
+
+    function carregarQuizz() {
+        fetch("/usuarios/pegarPontuacao", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idServer: sessionStorage.getItem("id")
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO registrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                // resposta.json().then(json => {
+                //     console.log(json);
+                //     console.log(JSON.stringify(json));
+                //     sessionStorage.EMAIL_USUARIO = json.email;
+                //     sessionStorage.NOME_USUARIO = json.nome;
+                //     sessionStorage.ID_USUARIO = json.id;
+
+                //     setTimeout(function () {
+                //         window.location = "./Pg_livre.html";
+                //     }, 1000); // apenas para exibir o loading 
+
+                // });
+
+            } else {
+
+                // alert("Houve um erro ao tentar realizar o cadastro! Analise se os campos estão preenchidos correntamente ");
+
+                resposta.text().then(texto => {
+                    // console.error(texto); 
+                    // finalizarAguardar(texto); 
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+
+
+    }
+
+</script>

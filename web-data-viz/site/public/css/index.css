@@ -218,7 +218,6 @@ z {
     display: flex;
     align-items: center;
     background-color: #d1dee491;
-
 }
 
 .inputs {
@@ -286,7 +285,16 @@ z {
 
 .botão_saber {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-    
+#btnVerFilmografia {
+    width: 243px;
+    height: 320px;
+    font-size: 40px;
+    background-image: url(assets/imgs/IconMain/Studio_Ghibli_capa.webp);
+    border-radius: 10px;
+    background-size: cover; 
+    background-position: center; 
+}

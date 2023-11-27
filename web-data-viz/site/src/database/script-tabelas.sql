@@ -1,4 +1,4 @@
-drop database Projeto_Individual;
+
 create database Projeto_Individual;
 
 use Projeto_Individual;
@@ -10,6 +10,16 @@ create table Usuario (
   senha varchar(45) not null
 );
 
+create table Quizz (
+	fkUsuario int primary key,
+    pontuacao int not null,
+    dtTentativa date not null
+);
 
+alter table Quizz 
+	add foreign key (fkUsuario) 
+		references Usuario (idUsuario);
 
 select * from Usuario;
+
+select * from Quizz;

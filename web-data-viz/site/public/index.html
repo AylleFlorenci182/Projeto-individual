@@ -32,10 +32,6 @@
 
     <div class="NavBar">
 
-        <a href="#quiz">
-            <ul class="NavIcon1">QUIZ</b></ul>
-        </a>
-
         <a href="#sobre">
             <ul class="NavIcon1">HISTORIA</ul>
         </a>
@@ -53,6 +49,7 @@
         </a>
 
     </div>
+
 
     <div class="saudacao" id="sobre">
 
@@ -257,8 +254,17 @@
     </div>
 
     <div class="botão_saber">
-        <button style=" background-color: #9ec993; border-radius: 10px;font-size: 20px;
-        " onclick="Ler_Mais()">Ler Mais Sobre..</button>
+
+        <button style=" background-color: #9ec993; border-radius: 10px;font-size: 20px;" onclick="Ler_Mais()">
+            Ler Mais Sobre..
+        </button>
+
+        <b> OU </b>
+
+        <button style=" background-color: #9ec993; border-radius: 10px;font-size: 20px;" onclick="Ler_Mais()">
+            Teste seu conhecimento com nossos quizzes
+        </button>
+
     </div>
 
     <div class="container" id="filmes">
@@ -589,7 +595,9 @@
         </div>
 
         <div class="botão_saber">
+
             <div class="background-images">
+
                 <button id="btnVerFilmografia"
                     style="width: 243px; height: 320px; font-size: 40px; background-image: url(assets/imgs/IconMain/Studio_Ghibli_capa.webp) ; border-radius: 10px;"
                     onclick="Ler_Mais()">
@@ -597,7 +605,6 @@
                 </button>
             </div>
         </div>
-
 
     </div>
 
@@ -614,7 +621,7 @@
                 Mas antes preciso que você passe por algumas etapas, não se preocupe, não vou confirmar se você é ou
                 não um robô, pois como em Castelo no Céu, robôs são bem-vindos entre a gente!
                 <br><br>
-                preencha os campos ao lado para adentrar nosso site
+                preencha os campos ao lado para explorar meu site por completo
                 <br><br>
             </p>
 
@@ -971,11 +978,10 @@
 
                 resposta.json().then(json => {
                     console.log(json);
-                    console.log(JSON.stringify(json));
+                    // console.log(JSON.stringify(json));
                     sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
-
+                    sessionStorage.NOME_USUARIO = json.nickname;
+                    sessionStorage.ID_USUARIO = json.idusuario;
                     setTimeout(function () {
                         window.location = "./Pg_livre.html";
                     }, 1000); // apenas para exibir o loading 
