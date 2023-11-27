@@ -1,5 +1,21 @@
 var usuarioModel = require("../models/usuarioModel");
 
+function dadosGrafico(req, res){
+    console.log("dentro do controller");
+    usuarioModel.model.dadosGrafico()
+    .then(
+        function (resultado){
+            res.json(resultado[0]);
+        }
+    ).catch(
+        function (erro) {
+            console.log(erro);
+            console.log("\nHouve um erro ao realizar o login! Erro: ", erro.sqlMessage);
+            res.status(500).json(erro.sqlMessage);
+        }
+    );
+}
+
 function autenticar(req, res) {
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
@@ -113,8 +129,10 @@ function registrar(req, res) {
 
 function pegarPontuacao(req, res) {
     var id = req.body.idServer;
+    console.log(id)
 
     usuarioModel.pegarPontuacao(id)
+
         .then(
             function (resultadoGet) {
                 console.log(`\nResultados encontrados: ${resultadoGet.length}`);
@@ -138,5 +156,7 @@ module.exports = {
 
     registrar,
 
-    pegarPontuacao
+    pegarPontuacao,
+
+    dadosGrafico
 }

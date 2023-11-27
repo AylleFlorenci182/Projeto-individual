@@ -10,6 +10,8 @@
 
     <title>Pagina livre</title>
 
+    <script src="path/to/chartjs/dist/chart.umd.js"></script>
+
 </head>
 
 <body id="sobre">
@@ -1572,10 +1574,19 @@
             pontuação
         </button>
 
-        <!-- <button onclick="ver_pontuacao()"
+        <button onclick="ver_pontuacao()"
             style="display: block; margin: 20px auto; padding: 10px 20px; background-color: #4caf50; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">ver
             pontuação
-        </button> -->
+        </button>
+    </div>
+
+    <div class="grafico">
+
+
+        <canvas id="myChart"></canvas>
+
+
+
     </div>
 
     <div class="footer" id="contato">
@@ -1637,8 +1648,33 @@
 
 </html>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <script>
 
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+
+<script>
     function verificar_resposta() {
         const perguntas = document.querySelectorAll('[name^="questao"]');
 
@@ -1674,6 +1710,7 @@
     }
 
     function registro_bd() {
+
         fetch("/usuarios/registrar", {
             method: "POST",
             headers: {
@@ -1690,15 +1727,15 @@
                 console.log(resposta);
 
                 // resposta.json().then(json => {
-                //     console.log(json);
-                //     console.log(JSON.stringify(json));
-                //     sessionStorage.EMAIL_USUARIO = json.email;
-                //     sessionStorage.NOME_USUARIO = json.nome;
-                //     sessionStorage.ID_USUARIO = json.id;
+                // console.log(json);
+                // console.log(JSON.stringify(json));
+                // sessionStorage.EMAIL_USUARIO = json.email;
+                // sessionStorage.NOME_USUARIO = json.nome;
+                // sessionStorage.ID_USUARIO = json.id;
 
-                //     setTimeout(function () {
-                //         window.location = "./Pg_livre.html";
-                //     }, 1000); // apenas para exibir o loading 
+                // setTimeout(function () {
+                // window.location = "./Pg_livre.html";
+                // }, 1000); // apenas para exibir o loading
 
                 // });
 
@@ -1707,8 +1744,8 @@
                 alert("Houve um erro ao tentar realizar o cadastro! Analise se os campos estão preenchidos correntamente ");
 
                 resposta.text().then(texto => {
-                    // console.error(texto); 
-                    // finalizarAguardar(texto); 
+                    // console.error(texto);
+                    // finalizarAguardar(texto);
                 });
             }
 
@@ -1719,33 +1756,35 @@
         return false;
     }
 
-    function validarData() {
-        var data = new Date();
+    // function validarData() {
 
-        var dataAtual = `${data.getFullYear()}-${data.getMonth() + 1}-${data.getDate()}`;
+    // var data = new Date();
 
-        var ultima_pontuacao = sessionStorage.getItem("ultima_pontuacao");
+    // var dataAtual = `${data.getFullYear()}-${data.getMonth() + 1}-${data.getDate()}`;
 
-        if (ultima_pontuacao == dataAtual) {
+    // var ultima_pontuacao = sessionStorage.getItem("ultima_pontuacao");
 
-            return false;
+    // if (ultima_pontuacao == dataAtual) {
 
-        } else {
+    // return false;
 
-            return true;
+    // } else {
 
-        }
+    // return true;
 
-    }
+    // }
+
+    // }
 
     function carregarQuizz() {
+
         fetch("/usuarios/pegarPontuacao", {
-            method: "GET",
+            method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                idServer: sessionStorage.getItem("id")
+                idServer: sessionStorage.ID_USUARIO
             })
         }).then(function (resposta) {
             console.log("ESTOU NO THEN DO registrar()!")
@@ -1753,26 +1792,26 @@
             if (resposta.ok) {
                 console.log(resposta);
 
-                // resposta.json().then(json => {
-                //     console.log(json);
-                //     console.log(JSON.stringify(json));
-                //     sessionStorage.EMAIL_USUARIO = json.email;
-                //     sessionStorage.NOME_USUARIO = json.nome;
-                //     sessionStorage.ID_USUARIO = json.id;
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    // sessionStorage.EMAIL_USUARIO = json.email;
+                    // sessionStorage.NOME_USUARIO = json.nome;
+                    // sessionStorage.ID_USUARIO = json.id;
 
-                //     setTimeout(function () {
-                //         window.location = "./Pg_livre.html";
-                //     }, 1000); // apenas para exibir o loading 
+                    // setTimeout(function () {
+                    // window.location = "./Pg_livre.html";
+                    // }, 1000); // apenas para exibir o loading
 
-                // });
+                });
 
             } else {
 
                 // alert("Houve um erro ao tentar realizar o cadastro! Analise se os campos estão preenchidos correntamente ");
 
                 resposta.text().then(texto => {
-                    // console.error(texto); 
-                    // finalizarAguardar(texto); 
+                    // console.error(texto);
+                    // finalizarAguardar(texto);
                 });
             }
 
@@ -1784,5 +1823,34 @@
 
 
     }
+
+    // function ver_pontuacao() {
+
+    //     fetch("/usuarios/dadosGrafico", {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         }
+    //     }).then(function (resposta) {
+    //         console.log("ESTOU NO THEN DO registrar()!")
+
+    //         if (resposta.ok) {
+    //             console.log(resposta);
+
+
+    //         } else {
+
+    //             alert("Houve um erro ao montar grafico");
+
+    //             resposta.text().then(texto => {
+
+    //             });
+    //         }
+
+    //     }).catch(function (erro) {
+    //         console.log(erro);
+    //     })
+
+    // }
 
 </script>

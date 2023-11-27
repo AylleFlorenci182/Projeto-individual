@@ -56,3 +56,8 @@ select Usuario.nickname,
 			from Usuario
 				join Quizz on Usuario.idusuario = Quizz.fkusuario
 					group by Usuario.idusuario, Usuario.nickname;
+
+select Quizz.pontuacao, Quizz.dtTentativa
+	from Usuario
+		join Quizz 
+			on Usuario.idusuario = Quizz.fkUsuario;

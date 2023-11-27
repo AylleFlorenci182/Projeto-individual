@@ -1,5 +1,17 @@
 var database = require("../database/config")
 
+function dadosGrafico() {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", email, senha)
+    var instrucao = `
+    select Quizz.pontuacao, Quizz.dtTentativa
+	from Usuario
+		join Quizz 
+			on Usuario.idusuario = Quizz.fkUsuario;    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+
+}
+
 function autenticar(email, senha) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", email, senha)
     var instrucao = `
@@ -44,7 +56,7 @@ function pegarPontuacao(id) {
 
     var instrucao = `
     
-        select * Quizz where id = ${id};
+        select * from Quizz where fkUsuario = ${id};
 
     `;
 
@@ -55,5 +67,6 @@ module.exports = {
     autenticar,
     cadastrar,
     registrar,
-    pegarPontuacao
+    pegarPontuacao,
+    dadosGrafico
 };
